@@ -43,6 +43,7 @@
      <Compile Include="Assets/Scripts/Player.cs" />
      <Compile Include="Assets/Scripts/Enemy.cs" />
      <Compile Include="Assets/Scripts/MainMenuController.cs" />
+     <Compile Include="Assets/Scripts/GameOverController.cs" />
     <Reference Include="UnityEngine">
         <HintPath>/Applications/Unity/Hub/Editor/2021.1.22f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

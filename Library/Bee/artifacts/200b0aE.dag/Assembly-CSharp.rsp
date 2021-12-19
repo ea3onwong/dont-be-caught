@@ -346,6 +346,7 @@
 "Assets/Scripts/Enemy.cs"
 "Assets/Scripts/EnemySpawner.cs"
 "Assets/Scripts/GameManager.cs"
+"Assets/Scripts/GameOverController.cs"
 "Assets/Scripts/MainCameraFollow.cs"
 "Assets/Scripts/MainMenuController.cs"
 "Assets/Scripts/Player.cs"
