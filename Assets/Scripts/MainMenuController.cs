@@ -9,15 +9,13 @@ public class MainMenuController : MonoBehaviour {
 
     public void SelectPlayer1() {
         selectedCharacter = 0;
-        Debug.Log(selectedCharacter);
         GameManager.characterIndex = selectedCharacter;
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("GamePlayLevel1");
     }
 
     public void SelectPlayer2() {
         selectedCharacter = 1;
-        Debug.Log(selectedCharacter);
         GameManager.characterIndex = selectedCharacter;
-        SceneManager.LoadScene("GamePlay");
+        SceneManager.LoadScene("GamePlayLevel1");
     }
 }

@@ -26,8 +26,8 @@ public class GameManager : MonoBehaviour {
     }
 
     private void OnLevelFinishedLoading(Scene scene, LoadSceneMode mode) {
-        if (scene.name == "GamePlay") {
-            Instantiate(characters[characterIndex]);
+        if (scene.name == "GamePlayLevel1") {
+            Instantiate(characters[characterIndex], new Vector2(-3.257354f, -2.343364f), Quaternion.identity);
         }
     }
 }
