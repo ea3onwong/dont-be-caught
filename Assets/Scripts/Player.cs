@@ -28,8 +28,9 @@ public class Player : MonoBehaviour
 
     private void Update() {
         PlayerMovement();
-        AnimatePlayer();
+        RunAnimation();
         PlayerJump();
+        JumpAnimation();
     }
 
     private void PlayerMovement() {
@@ -37,9 +38,12 @@ public class Player : MonoBehaviour
         transform.position += new Vector3(movementX, 0f, 0f) * Time.deltaTime * moveForce;
     }
 
-    private void AnimatePlayer() {
-        RunAnimation();
-        JumpAnimation();
+    private void PlayerJump() {
+        if (isOnGround && Input.GetButtonDown("Jump")) {
+            isOnGround = false;
+            anime.SetBool(JUMP, true);
+            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+        } 
     }
 
     private void RunAnimation() {
@@ -58,14 +62,6 @@ public class Player : MonoBehaviour
         if (isOnGround) {
             anime.SetBool(JUMP, false);
         }
-    }
-
-    private void PlayerJump() {
-        if (isOnGround && Input.GetButtonDown("Jump")) {
-            isOnGround = false;
-            anime.SetBool(JUMP, true);
-            rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
-        } 
     }
 
     private void OnCollisionEnter2D(Collision2D collision) {
